@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Space Shooter - MiniApp</title>
+  <style>
+    html,body{height:100%;margin:0;background:#000;color:#fff;font-family:Arial}
+    #gameWrap{position:relative;width:100%;height:100vh;overflow:hidden}
+    canvas{display:block;width:100%;height:100%}
+    .hud{position:absolute;left:10px;top:10px;z-index:10}
+    .playBtn{position:absolute;right:10px;top:10px;z-index:10;padding:10px 14px;background:#1e88e5;border-radius:8px}
+    .yt{position:absolute;left:10px;bottom:10px;z-index:10}
+    .author{position:absolute;right:10px;bottom:10px;opacity:0.8}
+    .touch-controls{position:absolute;left:50%;transform:translateX(-50%);bottom:20px;z-index:11;display:flex;gap:10px}
+    .btn{background:rgba(255,255,255,0.08);padding:12px;border-radius:50%}
+    #progressBarContainer{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:70%;height:24px;background:#222;border-radius:12px;overflow:hidden;display:none;z-index:20}
+    #progressBar{height:100%;width:0;background:#4caf50;transition:width 0.4s}
+  </style>
+</head>
+<body>
+  <div id="gameWrap">
+    <canvas id="gameCanvas"></canvas>
+    <div class="hud" id="hud">
+      <div id="hearts">❤❤❤❤❤</div>
+      <div id="wave">Wave: 0 / 100</div>
+      <div id="score">Score: 0</div>
+    </div>
+    <button class="playBtn" id="playBtn">PLAY</button>
+    <div class="yt"><a href="https://www.youtube.com/" target="_blank" style="color:#fff;text-decoration:none">YouTube</a></div>
+    <div class="author">GAME BY KWISED X LEVANTESHOW</div>
+    <div class="touch-controls" id="touchControls" style="display:none">
+      <div class="btn" id="left">◀</div>
+      <div class="btn" id="shoot">●</div>
+      <div class="btn" id="right">▶</div>
+    </div>
+    <div id="progressBarContainer"><div id="progressBar"></div></div>
+  </div>
+
+<script src="/static/game.js"></script>
+</body>
+</html>
