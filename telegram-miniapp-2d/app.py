@@ -4,7 +4,7 @@ import os
 
 app = Flask(__name__, static_folder='static', template_folder='templates')
 
-BOT_TOKEN = os.environ.get('BOT_TOKEN', 'PUT_YOUR_BOT_TOKEN_HERE')
+BOT_TOKEN = os.environ.get('8467980888:AAF12ZMcgyBnMYvShe2eFeRUSGRkWqb5Ei4')
 ADMIN_CHAT_ID = os.environ.get('ADMIN_CHAT_ID')
 
 TELEGRAM_API = f'https://api.telegram.org/bot{BOT_TOKEN}'
